@@ -9,7 +9,7 @@ moduleConfig.rules.push({
     use: [
         'style-loader',
         'css-loader',
-        'postcss-loader'
+        'postcss-loader',
     ],
 });
 
