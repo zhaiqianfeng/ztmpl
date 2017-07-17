@@ -25,24 +25,24 @@ var configPlugins = [
 
 pageArr.forEach((page) => {
     var htmlPlugin;
-if(page=='home/index'){
-    htmlPlugin = new HtmlWebpackPlugin({
-        filename: `index.html`,
-        template: path.resolve(dirVars.pagesDir, `./${page}/html.js`),
-        chunks: [page, 'commons/commons'],
-        hash: true, // 为静态资源生成hash值
-        xhtml: true,
-    });
-}else{
-    htmlPlugin = new HtmlWebpackPlugin({
-        filename: `${page}.html`,
-        template: path.resolve(dirVars.pagesDir, `./${page}/html.js`),
-        chunks: [page, 'commons/commons'],
-        hash: true, // 为静态资源生成hash值
-        xhtml: true,
-    });
-}
-configPlugins.push(htmlPlugin);
+    if (page == 'home/index') {
+        htmlPlugin = new HtmlWebpackPlugin({
+            filename: `index.html`,
+            template: path.resolve(dirVars.pagesDir, `./${page}/html.js`),
+            chunks: [page, 'commons/commons'],
+            hash: true, // 为静态资源生成hash值
+            xhtml: true,
+        });
+    } else {
+        htmlPlugin = new HtmlWebpackPlugin({
+            filename: `${page}.html`,
+            template: path.resolve(dirVars.pagesDir, `./${page}/html.js`),
+            chunks: [page, 'commons/commons'],
+            hash: true, // 为静态资源生成hash值
+            xhtml: true,
+        });
+    }
+    configPlugins.push(htmlPlugin);
 });
 
 module.exports = configPlugins;
