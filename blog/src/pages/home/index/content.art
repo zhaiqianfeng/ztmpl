@@ -1,0 +1,7 @@
+{{extend '../../../layout/index-style.art'}}
+
+{{block 'title'}}{{title}}{{/block}}
+
+{{block 'content'}}
+	home content
+{{/block}}

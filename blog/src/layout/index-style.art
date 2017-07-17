@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{{block 'title'}}首页{{/block}}</title>
+</head>
+<body>
+{{block 'content'}}内容{{/block}}
+</body>
+</html>
