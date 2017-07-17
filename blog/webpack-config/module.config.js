@@ -4,12 +4,12 @@ const moduleConfig = require('./common/module.config.js');
 
 
 moduleConfig.rules.push({
-    test: /\.less$/,
+    test: /\.css$/,
     include: dirVars.srcRootDir,
     use: [
         'style-loader',
         'css-loader',
-        'less-loader',
+        'postcss-loader'
     ],
 });
 
